@@ -55,9 +55,32 @@ function displayWeather(){
     
 }
 
-function celsiusToFahrenheit(temperature){
+function convertTemperature(value, from, to) {
 
-    return (temperature * 9/5) + 32;
+    let scale1 = from.toLowerCase();
+    let scale2 = to.toLowerCase();
+
+    if (scale1 == 'k') {
+        if (scale2 == 'c') {
+            return (value - 273);
+        } else if (scale2 == 'f') {
+            return (((value - 273) * 1.8) + 32);
+        }
+    } else if (scale1 == 'c') {
+        if (scale2 == 'f') {
+            return ((value * 1.8) + 32);
+        } else if (scale2 == 'k') {
+            return (value + 273);
+        }
+    } else if (scale == 'f') {
+        if (scale2 == 'c') {
+            return ((value - 32) / 1.8);
+        } else if (scale2 == 'k') {
+            return (((value - 32) / 1.8) + 32);
+        }
+    }
+
+    //return (temperature * 9/5) + 32;
     
 }
 
@@ -69,7 +92,7 @@ function getWeather(latitude, longitude) {
             let data = response.json();
             return data;
         }).then(function(data){
-            weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+            weather.temperature.value = Math.floor(convertTemperature(data.main.temp, 'k', 'c'));
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
@@ -89,8 +112,7 @@ tempElement.addEventListener("click", () => {
     
     if(weather.temperature.unit == "celsius"){
 
-        let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
-        fahrenheit = Math.floor(fahrenheit);
+        let fahrenheit = Math.floor(convertTemperature(weather.temperature.value, 'c', 'f'));
         
         tempElement.innerHTML = `${fahrenheit}°<span>F</span>`;
         weather.temperature.unit = "fahrenheit";
