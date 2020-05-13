@@ -1,10 +1,10 @@
 body{
-    background-color: #293251;
+    background-color: darkslategray;
 }
 
 .container{
     width: 300px;    
-    background-color: #FFF;
+    background-color: #F4F9FF;
     
     display: block;
     margin: 25px auto;
