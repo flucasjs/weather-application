@@ -1,5 +1,5 @@
 body{
-    background-color: darkslategray;
+    background-color: teal;
 }
 
 .container{
@@ -33,6 +33,7 @@ body{
 
 .notification{
     background-color: #f8d7da;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
     display: none;
 }
 
