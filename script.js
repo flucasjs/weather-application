@@ -79,9 +79,6 @@ function convertTemperature(value, from, to) {
             return (((value - 32) / 1.8) + 32);
         }
     }
-
-    //return (temperature * 9/5) + 32;
-    
 }
 
 function getWeather(latitude, longitude) {
@@ -99,6 +96,7 @@ function getWeather(latitude, longitude) {
             weather.country = data.sys.country;
         }).then(function(){
             displayWeather();
+            displayBackgrounColor();
         });
 
 }
@@ -125,4 +123,17 @@ tempElement.addEventListener("click", () => {
     }
     
 });
+
+function displayBackgrounColor() {
+
+    let timePeriod = weather.iconId[2];
+    alert(timePeriod);
+
+    if (timePeriod == "d") {
+        document.body.style.background = "linen";
+    } else if (timePeriod == "n") {
+        document.body.style.background = "darkslategray";
+    }
+
+}
  
