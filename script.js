@@ -127,7 +127,6 @@ tempElement.addEventListener("click", () => {
 function displayBackgrounColor() {
 
     let timePeriod = weather.iconId[2];
-    alert(timePeriod);
 
     if (timePeriod == "d") {
         document.body.style.background = "linen";
