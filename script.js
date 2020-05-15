@@ -12,9 +12,6 @@ const key = "82005d27a116c2880c8f0fcb866998a0";
 const weather = {};
 weather.temperature = {unit: "celsius"};
 
-// Kelvin value;
-const KELVIN = 273;
-
 // Determine if browser supports geolocation
 if ('geolocation' in navigator) {
 
@@ -61,22 +58,37 @@ function convertTemperature(value, from, to) {
     let scale2 = to.toLowerCase();
 
     if (scale1 == 'k') {
+        
         if (scale2 == 'c') {
+            
             return (value - 273);
+            
         } else if (scale2 == 'f') {
+            
             return (((value - 273) * 1.8) + 32);
+            
         }
     } else if (scale1 == 'c') {
+        
         if (scale2 == 'f') {
+            
             return ((value * 1.8) + 32);
+            
         } else if (scale2 == 'k') {
+            
             return (value + 273);
+            
         }
     } else if (scale == 'f') {
+        
         if (scale2 == 'c') {
+            
             return ((value - 32) / 1.8);
+            
         } else if (scale2 == 'k') {
+            
             return (((value - 32) / 1.8) + 32);
+            
         }
     }
 }
@@ -105,6 +117,7 @@ function getWeather(latitude, longitude) {
 tempElement.addEventListener("click", () => {
 
     if(weather.temperature.value === undefined) {
+        
         return;
     }
     
@@ -129,9 +142,13 @@ function displayBackgroundColor() {
     let timePeriod = weather.iconId[2];
 
     if (timePeriod == "d") {
+        
         document.body.style.background = "linen";
+        
     } else if (timePeriod == "n") {
+        
         document.body.style.background = "darkslategray";
+        
     }
 
 }
