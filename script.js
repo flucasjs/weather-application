@@ -83,7 +83,7 @@ function convertTemperature(value, from, to) {
 
 function getWeather(latitude, longitude) {
 
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api).then(function(response){
             let data = response.json();
@@ -96,7 +96,7 @@ function getWeather(latitude, longitude) {
             weather.country = data.sys.country;
         }).then(function(){
             displayWeather();
-            displayBackgrounColor();
+            displayBackgroundColor();
         });
 
 }
@@ -124,7 +124,7 @@ tempElement.addEventListener("click", () => {
     
 });
 
-function displayBackgrounColor() {
+function displayBackgroundColor() {
 
     let timePeriod = weather.iconId[2];
 
