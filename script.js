@@ -6,7 +6,7 @@ const descElement = document.querySelector(".temperature-description p");
 const locationElement = document.querySelector(".location p");
 
 // OpenWeatherMap API Key
-const key = "82005d27a116c2880c8f0fcb866998a0";
+const key = "aefccbda5614d7492619f8a0522cc888";
 
 // Weather Data
 const weather = {};
