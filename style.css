@@ -29,6 +29,7 @@ body{
     margin: 0 auto;
     font-size: 2em;
     color: #293251;
+    user-select: none;
 }
 
 .notification{
