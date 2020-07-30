@@ -13,7 +13,7 @@ body{
     border-radius: 10px;
     padding-bottom : 50px;
 
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', Helvetica, sans-serif;
 }
 
 .app-title{
@@ -34,7 +34,7 @@ body{
 
 .notification{
     background-color: #f8d7da;
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: none;
 }
 
