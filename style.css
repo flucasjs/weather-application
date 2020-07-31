@@ -83,16 +83,17 @@ body{
 }
 
 .temperature-description p{
-    padding: 8px;
-    margin: 0;
+    padding-top: 20px;
+    margin: 5px;
     color: #293251;
     text-align: center;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 
 .location p{
+    padding: 5px;
     margin: 0;
-    padding: 0;
     color: #293251;
     text-align: center;
     font-size: 0.8em;
