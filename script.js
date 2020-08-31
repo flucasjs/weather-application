@@ -1,9 +1,9 @@
 // Selectors
-const notificationElement = document.querySelector(".notification");
-const iconElement = document.querySelector(".weather-icon");
-const tempElement = document.querySelector(".temperature-value p")
-const descElement = document.querySelector(".temperature-description p");
-const locationElement = document.querySelector(".location p");
+const notificationElement = document.querySelector(".notifier");
+const iconElement = document.querySelector(".weather-info__icon");
+const tempElement = document.querySelector(".weather-info__temperature p")
+const descElement = document.querySelector(".weather-info__description p");
+const locationElement = document.querySelector(".weather-info__location p");
 
 // OpenWeatherMap API Key
 const key = "aefccbda5614d7492619f8a0522cc888";
